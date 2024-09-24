@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "mod-intro",
+	"version": "${version}",
+	"name": "mod-intro",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mod-intro/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.connorespig.modintro.Modintro"
+		],
+		"client": [
+			"com.connorespig.modintro.ModintroClient"
+		],
+		"fabric-datagen": [
+			"com.connorespig.modintro.ModintroDataGenerator"
+		]
+	},
+	"mixins": [
+		"mod-intro.mixins.json",
+		{
+			"config": "mod-intro.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
